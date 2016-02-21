@@ -1,12 +1,13 @@
+---
 language: java
 cache:
   directories:
-    - $HOME/.m2
+  - "$HOME/.m2"
 env:
   global:
-    - MAVEN_OPTS="-XX:MaxPermSize=2g -Xmx4g"
-    - JAVA_OPTS="-XX:MaxPermSize=2g -Xmx4g"
+  - MAVEN_OPTS="-XX:MaxPermSize=2g -Xmx4g"
+  - JAVA_OPTS="-XX:MaxPermSize=2g -Xmx4g"
 before_install:
-  - unset GEM_PATH
+- unset GEM_PATH
 script:
-  - mvn clean install -Pqulice --errors
+- mvn clean install -Pqulice --errors
